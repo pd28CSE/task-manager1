@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %} Task Create  {% endblock title %}
+
+
+
+{% block content %}  
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form action="{% url 'tasks:task-create' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        Title: <input type="text" name="title" id="" placeholder="Title"  required> <br><br>
+        Description:  <textarea rows="5" cols="33" name="description" placeholder="Description" required></textarea> <br><br>
+      Images:  <input type="file" name="image" id="" multiple="true" accept="image/*" required> <br><br>
+       Due Date: <input type="date" name="dueDate" id="" required> <br><br>
+        <input type="checkbox" id="vehicle1" name="isComplete" value="True"> 
+        <label for="vehicle1"> Is Complete</label><br><br>
+        <label for="priority" >Priority:</label>
+        <select name="priority" id="">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select> <br> <br>
+        <button type="submit">Create</button>
+
+    </form>
+
+{% endblock content %}

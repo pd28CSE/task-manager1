@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} Create User Account  {% endblock title %}
+
+
+
+{% block content %}  
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form action="{% url 'tasks:user-create' %}" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+    <div class="fieldWrapper">
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+        {% if field.help_text %}
+        <p class="help">{{ field.help_text|safe }}</p>
+        {% endif %}
+    </div>
+{% endfor %}
+
+        <br><br>
+        <button type="submit">Create</button>
+
+    </form>
+
+{% endblock content %}

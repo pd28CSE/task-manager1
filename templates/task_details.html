@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %} Task Details  {% endblock title %}
+
+
+{% block content %}  
+
+{% if task %}
+
+    <p>
+        <h3>Title:</h3>
+    {{ task.title }}
+    </p>
+
+    <h3>Description:</h3> 
+    {{ task.description }}
+
+    <h3>Images:</h3>
+    <p>
+        {% for image in task.images.all %}
+        <img src="{{ image.image.url }}" alt="{{ image.image}}" srcset="" width="200" > <br> <hr><hr>
+        {% endfor %}
+    </p>
+
+    <h3>Created At:</h3>
+    {{ task.creationDateTime }}
+    <h3>Task Priority:  </h3>
+    {{ task.priority }}
+   <h3> Task Due Date: </h3>
+   {{ task.dueDate }}
+    <h3>
+    {% if task.isCompleted %} 
+        Task Completed
+     {% else %}
+         Task Incomplete.
+    {% endif %}
+    </h3>
+    <br> <br>
+
+    <a href="{% url 'tasks:task-update-view' task.id %}" > Update Task </a><br> <br>
+    <a href="{% url 'tasks:task-delete' task.id %}" > Delete Task </a><br> <br>
+
+{% else %}
+    <h2>You have no permission to access this task.</h2>
+
+{% endif %}
+
+
+{% endblock content %}
