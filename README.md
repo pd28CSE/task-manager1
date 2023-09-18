@@ -73,3 +73,173 @@ After complete the installation, now run the server
 
 
 ## API Documentation include in `Task Manager Api Documentations.postman_collection.json` file
+
+## API Doc
+
+### Create New User (POST Request) 
+
+    http://127.0.0.1:8000/task-api/create-user/
+
+
+Request Body
+
+    {
+        "first_name": "",
+        "last_name":"",
+        "username":"",
+        "password":""
+    }
+
+
+
+### Login User (POST Request) 
+
+    http://127.0.0.1:8000/task-api/
+
+
+Request Body
+
+    {
+        "username":"",
+        "password":""
+    }
+
+
+
+### Create User Task (POST Request) 
+
+    http://127.0.0.1:8000/task-api/create-task/
+
+
+Request Headers
+
+    {
+        "Content-Type":"multipart/form-data; boundary=<calculated when request is sent>",
+        "Authorization":"Token <token>"
+    }
+
+
+Request Body
+
+    {
+        "title":"",
+        "description":"",
+        "dueDate":"",
+        "priority":"",
+        "isCompleted":"",
+        "images": ['list of image']
+    }
+
+
+
+### Get User Task List (GET Request) 
+
+    http://127.0.0.1:8000/task-api/user-task-list/
+
+
+Request Headers
+
+    {
+        "Authorization":"Token <token>"
+    }
+
+
+Response Body
+
+    [
+        {
+            "id": 33,
+            "user": "mir",
+            "title": "Why do we use it?",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "images": [
+                {
+                    "id": 42,
+                    "image": "http://127.0.0.1:8000/medias/images/tai-bui-QW89whdEClA-unsplash_DqmVrGz.jpg"
+                },
+                {
+                    "id": 43,
+                    "image": "http://127.0.0.1:8000/medias/images/420120_uedYOZc.jpg"
+                }
+            ],
+            "creationDateTime": "2023-09-18T14:56:13.947368+06:00",
+            "dueDate": "2023-07-02",
+            "priority": "High",
+            "isCompleted": false
+        },
+    ]
+
+
+
+### User Task Update (PUT Request) 
+
+    http://127.0.0.1:8000/task-api/update-task/<task_id>/
+
+
+Request Headers
+
+    {
+        "Content-Type":"multipart/form-data; boundary=<calculated when request is sent>",
+        "Authorization":"Token <token>"
+    }
+
+
+Request Body
+
+    {
+        "title":"",
+        "description":"",
+        "dueDate":"",
+        "priority":"",
+        "isCompleted":"",
+        "images": ['list of image']
+    }
+
+
+
+### User Task Delete (DELETE Request) 
+
+    http://127.0.0.1:8000/task-api/delete-task/<task_id>/
+
+
+Request Headers
+
+    {
+        "Authorization":"Token <token>"
+    }
+
+
+
+### Get Specific Task (GET Request) 
+
+    http://127.0.0.1:8000/task-api/task-details/<task_id>/
+
+
+Request Headers
+
+    {
+        "Authorization":"Token <token>"
+    }
+
+Response Body
+
+    {
+        "id": 33,
+        "user": "mir",
+        "title": "Why do we use it?",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "images": [
+            {
+                "id": 42,
+                "image": "http://127.0.0.1:8000/medias/images/tai-bui-QW89whdEClA-unsplash_DqmVrGz.jpg"
+            },
+            {
+                "id": 43,
+                "image": "http://127.0.0.1:8000/medias/images/420120_uedYOZc.jpg"
+            }
+        ],
+        "creationDateTime": "2023-09-18T14:56:13.947368+06:00",
+        "dueDate": "2023-07-02",
+        "priority": "High",
+        "isCompleted": false
+    }
