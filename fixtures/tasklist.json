@@ -834,6 +834,78 @@
   }
 },
 {
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 9,
+    "codename": "add_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 9,
+    "codename": "change_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 9,
+    "codename": "delete_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 9,
+    "codename": "view_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add token",
+    "content_type": 10,
+    "codename": "add_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change token",
+    "content_type": 10,
+    "codename": "change_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete token",
+    "content_type": 10,
+    "codename": "delete_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view token",
+    "content_type": 10,
+    "codename": "view_tokenproxy"
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
@@ -865,6 +937,24 @@
     "is_staff": false,
     "is_active": true,
     "date_joined": "2023-09-17T18:43:54.908Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$q3zhkNTPmj60gButb7GIEo$U76O44TvcoIQKrX77CZ8dBSm79uCgttkOmOe2s5Ak30=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mir",
+    "first_name": "Mirr",
+    "last_name": "Debnath",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-18T06:42:45.502Z",
     "groups": [],
     "user_permissions": []
   }
@@ -934,11 +1024,43 @@
   }
 },
 {
-  "model": "sessions.session",
-  "pk": "c9zk1q4pwf3rpqgabsse9zbcj0hpaggo",
+  "model": "contenttypes.contenttype",
+  "pk": 9,
   "fields": {
-    "session_data": ".eJxVjEEOwiAQRe_C2hCgQMWl-56BDDODVA0kpV0Z765NutDtf-_9l4iwrSVunZc4k7gILU6_WwJ8cN0B3aHemsRW12VOclfkQbucGvHzerh_BwV6-dZOJc2Oc0DMflAKjGOnwqizxyEjWmuVCQEpn9nr4J025NiOBMpoTCzeH-ZWN_w:1qhx49:K2sH4_Bb2xMODOmvsJsc2bkOLm88tD58FY5lvRbjtFc",
-    "expire_date": "2023-10-01T19:04:21.402Z"
+    "app_label": "authtoken",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "tokenproxy"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "1298a9733db72d48dd57ea296c64d36f7b986f36",
+  "fields": {
+    "user": 1,
+    "created": "2023-09-18T06:36:58.121Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "2a8c5683223c5f90190fb95a35d8227998e6527d",
+  "fields": {
+    "user": 7,
+    "created": "2023-09-18T06:51:21.886Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "c435d1c56e9e65064abcf46907b4916cb631ea66",
+  "fields": {
+    "user": 6,
+    "created": "2023-09-18T08:50:24.499Z"
   }
 },
 {
@@ -988,6 +1110,167 @@
   "pk": 20,
   "fields": {
     "image": "images/react.png"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 21,
+  "fields": {
+    "image": "images/flower_XFduElJ.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 22,
+  "fields": {
+    "image": "images/420120_gutciv8.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 23,
+  "fields": {
+    "image": "images/flower_kvuANvu.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 24,
+  "fields": {
+    "image": "images/420120_jyU1lnd.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 25,
+  "fields": {
+    "image": "images/flower_kYw2wX0.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 26,
+  "fields": {
+    "image": "images/420120_ayixu5Z.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 27,
+  "fields": {
+    "image": "images/flower_Xtw11eN.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 28,
+  "fields": {
+    "image": "images/420120_B8ipW10.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 29,
+  "fields": {
+    "image": "images/flower_s5r9nHr.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 30,
+  "fields": {
+    "image": "images/420120_eo1o4Y0.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 31,
+  "fields": {
+    "image": "images/flower_HHs7J2v.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 32,
+  "fields": {
+    "image": "images/420120_ce7eu0E.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 33,
+  "fields": {
+    "image": "images/flower_Az2tA84.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 34,
+  "fields": {
+    "image": "images/420120_TJcrY1j.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 35,
+  "fields": {
+    "image": "images/flower_O9uUcW4.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 36,
+  "fields": {
+    "image": "images/420120_nq06owj.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 37,
+  "fields": {
+    "image": "images/tai-bui-QW89whdEClA-unsplash_KYQBhmb.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 38,
+  "fields": {
+    "image": "images/420120_6Jqeg13.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 39,
+  "fields": {
+    "image": "images/dart_uVPceWQ.png"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 40,
+  "fields": {
+    "image": "images/flutter_gAcPYoA.png"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 41,
+  "fields": {
+    "image": "images/django_HkcjUrt.png"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 42,
+  "fields": {
+    "image": "images/tai-bui-QW89whdEClA-unsplash_DqmVrGz.jpg"
+  }
+},
+{
+  "model": "tasks.taskimage",
+  "pk": 43,
+  "fields": {
+    "image": "images/420120_uedYOZc.jpg"
   }
 },
 {
@@ -1052,8 +1335,8 @@
     "priority": "High",
     "isCompleted": true,
     "images": [
-      19,
-      14
+      14,
+      19
     ]
   }
 },
@@ -1070,6 +1353,176 @@
     "isCompleted": false,
     "images": [
       20
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 17,
+  "fields": {
+    "user": 1,
+    "title": "Testing",
+    "description": "test description",
+    "creationDateTime": "2023-09-18T07:23:15.620Z",
+    "dueDate": "2025-08-01",
+    "priority": "Medium",
+    "isCompleted": false,
+    "images": [
+      21,
+      22
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 21,
+  "fields": {
+    "user": 1,
+    "title": "Testing Data",
+    "description": "test description",
+    "creationDateTime": "2023-09-18T07:25:54.134Z",
+    "dueDate": "2025-08-01",
+    "priority": "Medium",
+    "isCompleted": true,
+    "images": [
+      23,
+      24
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 23,
+  "fields": {
+    "user": 1,
+    "title": "This is Title",
+    "description": "test description.",
+    "creationDateTime": "2023-09-18T07:27:40.764Z",
+    "dueDate": "2024-07-01",
+    "priority": "High",
+    "isCompleted": false,
+    "images": [
+      37,
+      38
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 24,
+  "fields": {
+    "user": 1,
+    "title": "Testing Data3",
+    "description": "test description",
+    "creationDateTime": "2023-09-18T08:02:12.587Z",
+    "dueDate": "2025-08-01",
+    "priority": "Medium",
+    "isCompleted": true,
+    "images": [
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 25,
+  "fields": {
+    "user": 1,
+    "title": "Testing Data4",
+    "description": "test description",
+    "creationDateTime": "2023-09-18T08:02:40.598Z",
+    "dueDate": "2025-08-01",
+    "priority": "Medium",
+    "isCompleted": true,
+    "images": [
+      27,
+      28
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 26,
+  "fields": {
+    "user": 1,
+    "title": "Testing Data5",
+    "description": "test description",
+    "creationDateTime": "2023-09-18T08:03:35.353Z",
+    "dueDate": "2025-08-01",
+    "priority": "Medium",
+    "isCompleted": true,
+    "images": [
+      29,
+      30
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 27,
+  "fields": {
+    "user": 1,
+    "title": "Testing Data6",
+    "description": "test description",
+    "creationDateTime": "2023-09-18T08:03:51.502Z",
+    "dueDate": "2025-08-01",
+    "priority": "Medium",
+    "isCompleted": true,
+    "images": [
+      31,
+      32
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 28,
+  "fields": {
+    "user": 1,
+    "title": "Testing Data7",
+    "description": "test description",
+    "creationDateTime": "2023-09-18T08:05:31.203Z",
+    "dueDate": "2025-08-01",
+    "priority": "Medium",
+    "isCompleted": true,
+    "images": [
+      33,
+      34
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 32,
+  "fields": {
+    "user": 7,
+    "title": "What is Lorem Ipsum",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    "creationDateTime": "2023-09-18T08:55:03.936Z",
+    "dueDate": "2023-08-01",
+    "priority": "Low",
+    "isCompleted": false,
+    "images": [
+      39,
+      40
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 33,
+  "fields": {
+    "user": 7,
+    "title": "Why do we use it?",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "creationDateTime": "2023-09-18T08:56:13.947Z",
+    "dueDate": "2023-07-02",
+    "priority": "High",
+    "isCompleted": false,
+    "images": [
+      42,
+      43
     ]
   }
 }

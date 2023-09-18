@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "e205380c-2c61-48e0-8990-2a8de28bbf78",
+		"name": "Task_Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16365646",
+		"_collection_link": "https://lunar-star-875150.postman.co/workspace/Team-Workspace~535ce1bb-50af-4686-88da-f2acf7fd88cd/collection/16365646-e205380c-2c61-48e0-8990-2a8de28bbf78?action=share&source=collection_link&creator=16365646"
+	},
+	"item": [
+		{
+			"name": "user create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Mirr",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Debnath",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "mir",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}create-user/",
+					"host": [
+						"{{BASEURL}}create-user"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "mir",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}",
+					"host": [
+						"{{BASEURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Why do we use it?",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+							"type": "text"
+						},
+						{
+							"key": "dueDate",
+							"value": "2023-10-01",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "High",
+							"type": "text"
+						},
+						{
+							"key": "isCompleted",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Users/parth/OneDrive/Desktop/django.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}create-task/",
+					"host": [
+						"{{BASEURL}}create-task"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Why do we use it?",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+							"type": "text"
+						},
+						{
+							"key": "dueDate",
+							"value": "2023-07-02",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "High",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/C:/Users/parth/Downloads/tai-bui-QW89whdEClA-unsplash.jpg",
+								"/C:/Users/parth/Downloads/420120.jpg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}update-task/33/",
+					"host": [
+						"{{BASEURL}}update-task"
+					],
+					"path": [
+						"33",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user task list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASEURL}}user-task-list/",
+					"host": [
+						"{{BASEURL}}user-task-list"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user task delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASEURL}}delete-task/28/",
+					"host": [
+						"{{BASEURL}}delete-task"
+					],
+					"path": [
+						"28",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user task details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASEURL}}task-details/12/",
+					"host": [
+						"{{BASEURL}}task-details"
+					],
+					"path": [
+						"12",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASEURL",
+			"value": "http://127.0.0.1:8000/task-api/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "2a8c5683223c5f90190fb95a35d8227998e6527d",
+			"type": "string"
+		}
+	]
+}
