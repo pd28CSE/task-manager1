@@ -1,7 +1,4 @@
 from rest_framework import generics
-from rest_framework import status
-from rest_framework.views import APIView
-from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.parsers import MultiPartParser, FormParser
@@ -64,5 +61,14 @@ class TaskDeleteAPIView(generics.DestroyAPIView):
     authentication_classes = [TokenAuthentication, ]
     permission_classes = [TaskUpdatePermission, ]
     serializer_class = TaskSerializer
+    queryset = Task.objects.all()
+
+
+class TaskDetailsAPIView(generics.RetrieveAPIView):
+
+    authentication_classes = [TokenAuthentication, ]
+    permission_classes = [TaskUpdatePermission, ]
+    serializer_class = TaskSerializer
+    lookup_url_kwarg = 'pk'
     queryset = Task.objects.all()
 
