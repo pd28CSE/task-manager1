@@ -533,6 +533,19 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2023-09-17T19:33:05.417Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "admin, Flower 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -825,7 +838,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$OskJpyVAe8dAciVj2n8Vbj$Lzvhh+pgSm7rlsyQpgEOSRKwIG1x2rgtkBx5f8Q2tng=",
-    "last_login": "2023-09-17T18:41:34.833Z",
+    "last_login": "2023-09-17T19:04:21.401Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "Mr",
@@ -921,6 +934,14 @@
   }
 },
 {
+  "model": "sessions.session",
+  "pk": "c9zk1q4pwf3rpqgabsse9zbcj0hpaggo",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgQMWl-56BDDODVA0kpV0Z765NutDtf-_9l4iwrSVunZc4k7gILU6_WwJ8cN0B3aHemsRW12VOclfkQbucGvHzerh_BwV6-dZOJc2Oc0DMflAKjGOnwqizxyEjWmuVCQEpn9nr4J025NiOBMpoTCzeH-ZWN_w:1qhx49:K2sH4_Bb2xMODOmvsJsc2bkOLm88tD58FY5lvRbjtFc",
+    "expire_date": "2023-10-01T19:04:21.402Z"
+  }
+},
+{
   "model": "tasks.taskimage",
   "pk": 14,
   "fields": {
@@ -1007,7 +1028,7 @@
   "pk": 12,
   "fields": {
     "user": 1,
-    "title": "Flower",
+    "title": "Flower 1",
     "description": "A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants. Flowers produce gametophytes, which in flowering plants consist of a few haploid cells which produce gametes.",
     "creationDateTime": "2023-09-17T18:35:13.706Z",
     "dueDate": "2023-09-28",

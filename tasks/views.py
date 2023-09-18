@@ -150,7 +150,6 @@ class TaskCreate(LoginRequiredMixin, generic.View):
         return render(request, self.template_name)
 
 
-
 class TaskFilterView(UserTaskListView):
 
     def get_queryset(self):
@@ -168,3 +167,6 @@ class TaskSearchView(UserTaskListView):
         user = self.request.user
         queryset = Task.objects.filter(user=user, title__icontains=title)
         return queryset
+
+
+# python manage.py dumpdata --indent=2 > fixtures/tasklist.json
