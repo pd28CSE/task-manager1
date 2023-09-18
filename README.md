@@ -45,31 +45,31 @@
 
 Install the virtual environment
 
-    task-manager> python -m venv env
+    task-manager1> python -m venv env
 
 Activate the virtual environment (env)
 
-    task-manager> env\Scripts\activate
+    task-manager1> env\Scripts\activate
 
 Now, install the dependency inside the virtual environment
 
-    (env) task-manager> pip install -r requirements.txt
+    (env) task-manager1> pip install -r requirements.txt
 
 Migrate the Database
 
-    (env) task-manager> python manage.py makemigrations
+    (env) task-manager1> python manage.py makemigrations
 
 Now Create the database tables
 
-    (env) task-manager> python manage.py migrate
+    (env) task-manager1> python manage.py migrate
 
 After create database tables
 
-    (env) task-manager> python manage.py loaddata fixtures/tasklist.json
+    (env) task-manager1> python manage.py loaddata fixtures/tasklist.json
 
 After complete the installation, now run the server
 
-    (env) task-manager> python manage.py runserver
+    (env) task-manager1> python manage.py runserver
 
 
 ## API Documentation include 
