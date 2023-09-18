@@ -63,7 +63,7 @@ Now Create the database tables
 
     (env) task-manager1> python manage.py migrate
 
-After create database tables
+After create database tables, Now load the dammy data in that database
 
     (env) task-manager1> python manage.py loaddata fixtures/tasklist.json
 
